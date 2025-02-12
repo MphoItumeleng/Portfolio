@@ -125,38 +125,33 @@ nav ul li a:hover::after{
     margin: 20px 0 40px;
 }
 
-/* Style for the tab links */
 .tab-links {
     padding: 12px 20px;
     font-size: 18px;
     font-weight: 500;
     cursor: pointer;
     position: relative;
-    border-radius: 10px; /* Rounded corners */
+    border-radius: 10px;
     transition: background 0.3s, color 0.3s;
     display: flex;
     align-items: center;
-    gap: 10px; /* Space between icon and text */
+    gap: 10px;
 }
 
-/* Default tab color */
 .tab-links {
     background: transparent;
     color: #333;
 }
 
-/* Active tab background */
 .tab-links.active-link {
-    background: #da6a02; /* Highlight color */
-    color: #fff; /* White text */
+    background: #da6a02;
+    color: #fff;
 }
 
-/* Icon styling */
 .tab-links i {
     font-size: 20px;
 }
 
-/* Remove old underline animation */
 .tab-links::after {
     content: none;
 }
@@ -216,7 +211,7 @@ nav ul li a:hover::after{
 .services-list div a{
     text-decoration: none;
     color: #fff;
-    font-size: 12px;
+    font-size: 15px;
     margin-top: 20px;
     display: inline-block;
 }
