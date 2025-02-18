@@ -11,12 +11,12 @@ html{
 
 body{
     background: #ffffff;
-    color: #fff;
+    color: #ffffff;
 }
 
 #header{
     width: 100%;
-    height:100vh;
+    height: 100vh;
     background-image: url(images/header1.jpg);
     background-size: cover;
     background-position: center;
@@ -36,7 +36,7 @@ nav{
     left: 0;
     width: 100%;
     z-index: 2;
-    background: #cfcece9a;
+    background: #cfcece9a
 }
 
 .logo{
@@ -50,7 +50,7 @@ nav ul li{
 }
 
 nav ul li a{
-    color: #000000;
+    color: #333;
     text-decoration: none;
     font-size: 18px;
     position: relative;
@@ -60,7 +60,7 @@ nav ul li a::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #da6a02;
+    background: #FF7F50;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -82,14 +82,14 @@ nav ul li a:hover::after{
 }
 
 .header-text h1 span{
-    color: #da6a02;
+    color: #FF7F50;
 }
 
 /* About Section */
 
 #about{
     padding: 80px 0;
-    color: #ababab;
+    color: #555;
 }
 
 .row{
@@ -114,18 +114,18 @@ nav ul li a:hover::after{
 .sub-title{
     font-size: 60px;
     font-weight: 600;
-    color: #da6a02;
+    color: #FF7F50;
     margin-bottom: 25px;
 }
 
-.tab-titles {
+.tab-titles{
     display: flex;
     align-items: center;
     gap: 20px;
     margin: 20px 0 40px;
 }
 
-.tab-links {
+.tab-links{
     padding: 12px 20px;
     font-size: 18px;
     font-weight: 500;
@@ -138,22 +138,18 @@ nav ul li a:hover::after{
     gap: 10px;
 }
 
-.tab-links {
+.tab-links{
     background: transparent;
     color: #333;
 }
 
-.tab-links.active-link {
-    background: #da6a02;
+.tab-links.active-link{
+    background: linear-gradient(135deg, #FF7F50, #FF4F70);
     color: #fff;
 }
 
-.tab-links i {
+.tab-links i{
     font-size: 20px;
-}
-
-.tab-links::after {
-    content: none;
 }
 
 .tab-contents ul li{
@@ -162,7 +158,7 @@ nav ul li a:hover::after{
 }
 
 .tab-contents ul li span{
-    color: #da6a02;
+    color: #FF7F50;
     font-size: 14px;
 }
 
@@ -172,7 +168,6 @@ nav ul li a:hover::after{
 
 .tab-contents.active-tab{
     display: block;
-
 }
 
 /* Services Section */
@@ -189,7 +184,7 @@ nav ul li a:hover::after{
 }
 
 .services-list div{
-    background: #a19d9d;
+    background: #adadad;
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
@@ -217,7 +212,7 @@ nav ul li a:hover::after{
 }
 
 .services-list div:hover{
-    background: #fd9534;
+    background: linear-gradient(135deg, #FF7F50, #FF4F70);
     transform: translateY(-10px);
 }
 
@@ -250,7 +245,7 @@ nav ul li a:hover::after{
 .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.6), #fd9534);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #FF7F50);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -273,7 +268,7 @@ nav ul li a:hover::after{
 
 .layer a{
     margin-top: 20px;
-    color: #fd9534;
+    color: #FF7F50;
     text-decoration: none;
     font-size: 18px;
     line-height: 60px;
@@ -296,7 +291,7 @@ nav ul li a:hover::after{
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #fd9534;
+    border: 1px solid #FF7F50;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
@@ -305,8 +300,7 @@ nav ul li a:hover::after{
 }
 
 .btn:hover{
-    background: #fd9534;
-
+    background: #FF7F50;
 }
 
 /* Contact Section */
@@ -321,11 +315,11 @@ nav ul li a:hover::after{
 
 .contact-left p{
     margin-top: 30px;
-    color: #000000
+    color: #333;
 }
 
 .contact-left p i{
-    color: #fd9534;
+    color: #FF7F50;
     margin-right: 15px;
     font-size: 25px;
 }
@@ -344,29 +338,43 @@ nav ul li a:hover::after{
 }
 
 .social-icons a:hover{
-    color: #fd9534;
+    color: #FF7F50;
     transform: translateY(-5px);
 }
 
 .btn.btn2{
     display: inline-block;
-    background: #fd9534;
+    background: linear-gradient(135deg, #FF7F50, #FF4F70);
+    color: white;
+    padding: 14px 50px;
+    font-size: 18px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
 }
 
 .contact-right form{
     width: 100%;
 }
 
-form input, form textarea{
+form input,
+form textarea{
     width: 100%;
-    border: 0;
+    border: 2px solid rgba(255, 127, 80, 0.5);
     outline: none;
-    background: #e4e4e4;
+    background: rgba(255, 255, 255, 0.1);
     padding: 15px;
     margin: 15px 0;
-    color: #000000;
+    color: #333;
     font-size: 18px;
-    border-radius: 6px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+form input:focus,
+form textarea:focus{
+    border-color: #FF7F50;
+    box-shadow: 0 0 10px rgba(255, 127, 80, 0.5);
 }
 
 form .btn2{
@@ -402,7 +410,7 @@ nav .fa-solid{
     }
 
     nav ul{
-        background: #fd9534ab;
+        background: rgba(255, 159, 113, 0.9);
         position: fixed;
         top: 0;
         right: -200px;
@@ -429,7 +437,8 @@ nav .fa-solid{
         font-size: 40px;
     }
 
-    .about-col-1, .about-col-2{
+    .about-col-1,
+    .about-col-2{
         flex-basis: 100%;
     }
 
@@ -441,28 +450,29 @@ nav .fa-solid{
         font-size: 14px;
     }
 
-    .tab-titles {
+    .tab-titles{
         flex-direction: column;
         gap: 10px;
     }
 
-    .tab-links {
+    .tab-links{
         width: 80%;
         font-size: 16px;
         padding: 10px;
         margin: 0;
     }
 
-    .tab-links.active-link {
-        background: #da6a02;
+    .tab-links.active-link{
+        background: #FF7F50;
         color: #fff;
     }
 
-    .tab-links i {
+    .tab-links i{
         font-size: 18px;
     }
 
-    .contact-left, .contact-right{
+    .contact-left,
+    .contact-right{
         flex-basis: 100%;
     }
 }
