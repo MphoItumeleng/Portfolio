@@ -180,75 +180,36 @@
                             <input type="email" name="email" id="email" placeholder="Your Email" required>
                             <textarea name="message" rows="5" id="message" placeholder="Your Message" required></textarea>
                             <button type="submit" class="btn btn2">Send</button>
-                        </form>                        
+                        </form>
+                        <p id="responseMessage"></p>
                     </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- Script for ChatBot -->
+                    <script>
+                    document.getElementById("contactForm").addEventListener("submit", function(event) {
+                        event.preventDefault();
 
-        <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
-        <script src="https://files.bpcontent.cloud/2025/02/17/11/20250217114358-JV818WGW.js"></script>
+                        var formData = {
+                            name: document.getElementById("name").value,
+                            email: document.getElementById("email").value,
+                            message: document.getElementById("message").value
+                        };
 
-        <!-- Script for Form Submission and Sweet Alerts -->
-
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script>
-            $(document).ready(function() {
-                $("#contactForm").submit(function(e) {
-                    e.preventDefault();
-                    
-                    // Show loader & disable clicks
-                    $("#loadingOverlay").fadeIn();
-                    
-                    $.ajax({
-                        type: "POST",
-                        url: "contact.php",
-                        data: $(this).serialize(),
-                        success: function(response) {
-                            // Hide loader after request completes
-                            $("#loadingOverlay").fadeOut();
-        
-                            if (response.trim() === "success") {
-                                Swal.fire({
-                                    icon: "success",
-                                    title: "Message Sent!",
-                                    text: "Your message has been sent successfully.",
-                                    confirmButtonColor: "#4CAF50"
-                                });
-                                $("#contactForm")[0].reset();
-                            } else {
-                                Swal.fire({
-                                    icon: "error",
-                                    title: "Oops...",
-                                    text: "Message sending failed. Please try again.",
-                                    confirmButtonColor: "#D32F2F"
-                                });
-                            }
-                        },
-                        error: function() {
-                            // Hide loader on error
-                            $("#loadingOverlay").fadeOut();
-                            
-                            Swal.fire({
-                                icon: "error",
-                                title: "Oops...",
-                                text: "Something went wrong. Please try again.",
-                                confirmButtonColor: "#D32F2F"
-                            });
-                        }
+                        fetch("https://script.google.com/macros/s/AKfycbwtRYzO5uY_5kOCuWm04di9YzXtAFh-Gg93MbqGyGq2XLg25rhzARdcNNIowl_yUAea/exec", {
+                            method: "POST",
+                            mode: "no-cors",
+                            headers: {
+                                "Content-Type": "application/json"
+                            },
+                            body: JSON.stringify(formData)
+                        }).then(() => {
+                            document.getElementById("responseMessage").textContent = "Message sent successfully!";
+                            document.getElementById("contactForm").reset();
+                        }).catch(error => {
+                            document.getElementById("responseMessage").textContent = "Error sending message. Please try again.";
+                            console.error("Error:", error);
+                        });
                     });
-                });
-            });
-        </script>
-
-        <!-- Loader -->
-
-        <div id="loadingOverlay">
-            <div class="spinner"></div>
-        </div>
+                    </script>
             
     </body>
 
