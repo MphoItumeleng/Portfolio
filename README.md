@@ -1,6 +1,6 @@
 # Portfolio
 
-Welcome to my personal portfolio! This project showcases my skills, experience, and projects in web development. It is built using HTML, CSS, JavaScript, and PHP to ensure a dynamic and interactive user experience.
+Welcome to my personal portfolio! This project showcases my skills, experience, and projects in web development. It is built using HTML, CSS, and JavaScript to ensure a dynamic and interactive user experience.
 
 
 # Features
