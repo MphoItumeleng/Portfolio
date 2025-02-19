@@ -173,14 +173,13 @@
                     </div>
                     
                     <!-- Form -->
-
                     <div class="contact-right">
-                        <form id="contactForm">
+                        <form id="contactForm" name="contact" method="POST" data-netlify="true">
                             <input type="text" name="name" id="name" placeholder="Your Name" required>
                             <input type="email" name="email" id="email" placeholder="Your Email" required>
                             <textarea name="message" rows="5" id="message" placeholder="Your Message" required></textarea>
                             <button type="submit" class="btn btn2">Send</button>
-                        </form>                        
+                        </form>
                     </div>
                 </div>
             </div>
@@ -191,7 +190,7 @@
         <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
         <script src="https://files.bpcontent.cloud/2025/02/17/11/20250217114358-JV818WGW.js"></script>
 
-        <!-- Script for Form Submission and Sweet Alerts -->
+        <!-- Script for Sweet Alerts -->
 
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -203,42 +202,39 @@
                     // Show loader & disable clicks
                     $("#loadingOverlay").fadeIn();
                     
-                    $.ajax({
-                        type: "POST",
-                        url: "contact.php",
-                        data: $(this).serialize(),
-                        success: function(response) {
-                            // Hide loader after request completes
-                            $("#loadingOverlay").fadeOut();
-        
-                            if (response.trim() === "success") {
-                                Swal.fire({
-                                    icon: "success",
-                                    title: "Message Sent!",
-                                    text: "Your message has been sent successfully.",
-                                    confirmButtonColor: "#4CAF50"
-                                });
-                                $("#contactForm")[0].reset();
-                            } else {
-                                Swal.fire({
-                                    icon: "error",
-                                    title: "Oops...",
-                                    text: "Message sending failed. Please try again.",
-                                    confirmButtonColor: "#D32F2F"
-                                });
-                            }
-                        },
-                        error: function() {
-                            // Hide loader on error
-                            $("#loadingOverlay").fadeOut();
-                            
+                    // Serialize form data
+                    let formData = new FormData(this);
+                    
+                    fetch("/", {
+                        method: "POST",
+                        body: formData
+                    }).then(response => {
+                        if (response.ok) {
+                            Swal.fire({
+                                icon: "success",
+                                title: "Message Sent!",
+                                text: "Your message has been sent successfully.",
+                                confirmButtonColor: "#4CAF50"
+                            });
+                            $("#contactForm")[0].reset();
+                        } else {
                             Swal.fire({
                                 icon: "error",
                                 title: "Oops...",
-                                text: "Something went wrong. Please try again.",
+                                text: "Message sending failed. Please try again.",
                                 confirmButtonColor: "#D32F2F"
                             });
                         }
+                    }).catch(() => {
+                        Swal.fire({
+                            icon: "error",
+                            title: "Oops...",
+                            text: "Something went wrong. Please try again.",
+                            confirmButtonColor: "#D32F2F"
+                        });
+                    }).finally(() => {
+                        // Hide loader after request completes
+                        $("#loadingOverlay").fadeOut();
                     });
                 });
             });
