@@ -11,7 +11,7 @@ Welcome to my personal portfolio! This project showcases my skills, experience, 
 
 * Interactive UI – JavaScript enhances user interactions and improves usability.
 
-* Contact Form – Users can reach out through a functional contact form powered by PHP.
+* Contact Form – Users can reach out through a functional contact form powered by Netlify.
 
 
 # Technologies Used
@@ -21,8 +21,6 @@ Welcome to my personal portfolio! This project showcases my skills, experience, 
 * CSS – For styling and layout.
 
 * JavaScript – For interactive features.
-
-* PHP – For backend functionality.
 
 
 # Installation & Setup
