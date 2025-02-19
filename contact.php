@@ -19,16 +19,16 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message']))
         $mail->isSMTP();
         $mail->Host = "smtp.gmail.com";
         $mail->SMTPAuth = true;
-        $mail->Username = " ";    // Use your own email address
-        $mail->Password = ' ';    // Use your own password
+        $mail->Username = "mphoitumeleng021@gmail.com";     // Use your own email address
+        $mail->Password = getenv("SMTP_PASSWORD");      // Use your own password
         $mail->Port = 587;
         $mail->SMTPSecure = "tls";
 
         // Email Settings
         $mail->isHTML(true);
-        $mail->setFrom(" ", "Portfolio Contact Form");     // Use your own email address
+        $mail->setFrom("mphoitumeleng021@gmail.com", "Portfolio Contact Form");     // Use your own email address
         $mail->addReplyTo($email, $name);
-        $mail->addAddress(" ");        // Use your own email address
+        $mail->addAddress("mphoitumeleng021@gmail.com");        // Use your own email address
 
         $mail->Subject = "New Contact Form Message from $name";
         $mail->Body = "<strong>Name:</strong> $name <br> <br>
