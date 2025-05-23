@@ -414,6 +414,9 @@ nav .fa-solid {
     transition: all 0.3s ease;
     position: relative;
     border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .grid-item:hover {
@@ -445,6 +448,9 @@ nav .fa-solid {
 .grid-content {
     padding: 25px;
     position: relative;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .grid-content h3 {
@@ -486,6 +492,7 @@ nav .fa-solid {
     flex-wrap: wrap;
     gap: 8px;
     margin: 15px 0;
+    flex-grow: 1;
 }
 
 .tech-tag {
@@ -495,6 +502,11 @@ nav .fa-solid {
     border-radius: 20px;
     font-size: 0.7rem;
     font-weight: 500;
+}
+
+.project-button-container {
+    margin-top: auto;
+    padding-top: 20px;
 }
 
 /* Certificates Section */
