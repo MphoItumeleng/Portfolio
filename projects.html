@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Projects - Mpho Itumeleng</title>
+    <title>Mpho Itumeleng - My Projects</title>
     <link rel="stylesheet" href="assets/style.css">
     <script src="https://kit.fontawesome.com/e7ac1cf3d2.js" crossorigin="anonymous"></script>
     <link rel="icon" href="assets/images/favicon.png">
-    <style>
-        
-    </style>
 </head>
+
 <body>
 
     <!-- Navbar -->
@@ -22,22 +21,32 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="index.html#about">About</a></li>
             <li><a href="index.html#services">Services</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="certifications.html">Certifications</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="certificates.html">Certifications</a></li>
             <li><a href="index.html#contact">Contact</a></li>
         </ul>
     </nav>
 
     <!-- Projects Section -->
-    <section id="projects" style="padding-top: 150px;">
-        <h1 class="sub-title" style="text-align:center;">My Projects</h1>
-        <div class="grid-container">
+    <section id="projects">
+        <div class="projects-header">
+            <h1 class="sub-title">My Projects</h1>
+            <p>Explore my collection of work showcasing my skills in web development, design, and problem-solving.</p>
+        </div>
 
+        <div class="grid-container">
             <div class="grid-item">
                 <img src="assets/images/Project1.png" alt="Weather App Screenshot">
                 <div class="grid-content">
                     <h3>Weather App</h3>
-                    <p>Get real-time weather data using OpenWeatherMap API.</p>
+                    <p>Get real-time weather data using OpenWeatherMap API with beautiful visual displays and
+                        location-based forecasts.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">API Integration</span>
+                        <span class="tech-tag">TKinter</span>
+                        <span class="tech-tag">Pillow (PIL)</span>
+                    </div>
                     <a href="https://mphoitumeleng.github.io/WeatherApp/" target="_blank">View Project</a>
                 </div>
             </div>
@@ -46,7 +55,13 @@
                 <img src="assets/images/Project2.png" alt="Memory Game Screenshot">
                 <div class="grid-content">
                     <h3>Memory Game</h3>
-                    <p>Sharpen your memory with this interactive JS game.</p>
+                    <p>Interactive card matching game with timer, score tracking, and multiple difficulty levels to test
+                        your memory.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">DOM Manipulation</span>
+                        <span class="tech-tag">Game Logic</span>
+                    </div>
                     <a href="https://mphoitumeleng.github.io/MemoryGame/" target="_blank">View Project</a>
                 </div>
             </div>
@@ -55,31 +70,80 @@
                 <img src="assets/images/Project3.png" alt="Portfolio Screenshot">
                 <div class="grid-content">
                     <h3>Portfolio Website</h3>
-                    <p>Clean and modern site showcasing my journey and skills.</p>
+                    <p>Responsive personal portfolio showcasing my skills, projects, and professional journey with clean
+                        modern design.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Responsive Design</span>
+                    </div>
                     <a href="https://github.com/MphoItumeleng/Portfolio" target="_blank">View Project</a>
                 </div>
             </div>
 
             <div class="grid-item">
-                <img src="assets/images/Project4.jpeg" alt="Portfolio Screenshot">
+                <img src="assets/images/Project4.jpeg" alt="To-Do List Screenshot">
                 <div class="grid-content">
                     <h3>To-Do List</h3>
-                    <p>This app allows users to manage their daily tasks with ease.</p>
+                    <p>Productivity app with task management, due dates, priority levels, and persistent storage for
+                        daily organization.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">CSS</span>
+                    </div>
                     <a href="https://my-to-do-list-lpmv.onrender.com/" target="_blank">View Project</a>
                 </div>
             </div>
 
             <div class="grid-item">
-                <img src="assets/images/Project5.png" alt="Portfolio Screenshot">
+                <img src="assets/images/Project5.png" alt="Movie Database Screenshot">
                 <div class="grid-content">
                     <h3>Movie Database Website</h3>
-                    <p>The Movie Database App lets users search movies and view their details.</p>
+                    <p>Browse movies, view details, ratings, and cast information with search functionality and
+                        responsive design.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">API Integration</span>
+                        <span class="tech-tag">State Management</span>
+                    </div>
                     <a href="https://movie-database1-ktsv.onrender.com/" target="_blank">View Project</a>
                 </div>
             </div>
-            <!-- Add more projects here by copying the block above -->
         </div>
     </section>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const gridItems = document.querySelectorAll('.grid-item');
+
+            const animateOnScroll = () => {
+                gridItems.forEach((item, index) => {
+                    const itemPosition = item.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.3;
+
+                    if (itemPosition < screenPosition) {
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0)';
+                        }, index * 100);
+                    }
+                });
+            };
+
+            // Initialize items for animation
+            gridItems.forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                item.style.transition = 'all 0.5s ease';
+            });
+
+            window.addEventListener('load', animateOnScroll);
+            window.addEventListener('scroll', animateOnScroll);
+        });
+    </script>
 </body>
+
 </html>
