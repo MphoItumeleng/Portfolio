@@ -331,6 +331,33 @@
         </div>
     </div>
 
+    <!-- Footer Section -->
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-name">
+                    <h3>Mpho Itumeleng</h3>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/MphoItumeleng" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:mphoitumeleng021@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mpho-itumeleng-202794295/" target="_blank"
+                        aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Mpho Itumeleng. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
     <!-- Script for ChatBot -->
 
     <script src="https://cdn.botpress.cloud/webchat/v2.5/inject.js"></script>
@@ -339,6 +366,9 @@
     <!-- Include Footer/scripts -->
     <script src="assets/script.js"></script>
     <script>
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+
         document.addEventListener('DOMContentLoaded', () => {
             const items = document.querySelectorAll('.cert-item');
             const links = document.querySelectorAll('.page-link');
