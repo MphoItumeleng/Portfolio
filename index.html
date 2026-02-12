@@ -1,237 +1,322 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mpho Itumeleng - Portfolio</title>
-        <link rel="stylesheet" href="assets/style.css">
-        <script src="https://kit.fontawesome.com/e7ac1cf3d2.js" crossorigin="anonymous"></script>
-        <script src="assets/script.js"></script>
-        <link rel="icon" type="image/png" href="assets/images/favicon.png">
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mpho Itumeleng - Portfolio</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <script
+      src="https://kit.fontawesome.com/e7ac1cf3d2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/script.js"></script>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  </head>
 
-    <body>
+  <body>
+    <!-- Header Section -->
 
-        <!-- Header Section -->
-
-        <div id="header">
-            <div class="container">
-                <nav>
-                    <a href="#header">
-                        <img src="assets/images/MyLogo4.png" class="logo">
-                    </a>
-                    <ul id="sidemenu">
-                        <li><a href="#header">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-                    </ul>
-                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-                </nav>
-                <div class="header-text">
-                    <p>Software Developer</p>
-                    <h1>Hi, I'm <span>Mpho Itumeleng</span><br>This is my portfolio!</h1>
-                </div>
-            </div>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <a href="#header">
+            <img src="assets/images/MyLogo4.png" class="logo" />
+          </a>
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+          <p>Software Developer</p>
+          <h1>
+            Hi, I'm <span>Mpho Itumeleng</span><br />This is my portfolio!
+          </h1>
         </div>
+      </div>
+    </div>
 
-        <!-- About Section -->
+    <!-- About Section -->
 
-        <div id="about">
-            <div class="container">
-                <div class="row">
-                    <div class="about-col-1">
-                        <img src="assets/images/about2.jpg">
-                    </div>
-                    <div class="about-col-2">
-                        <h1 class="sub-title">About Me</h1>
-                        <p>
-                            I'm a graduate in Software Development. My journey so far has been a mix of curiosity, learning, and collaboration, 
-                            and I’m always excited to discover what’s next in the ever-evolving world of tech. 
-                            <br><br>Beyond my technical skills, I bring a positive attitude (and a bright smile!) to every project I take on. 
-                            <br><br>I thrive in team settings where communication and collaboration are key, but I also value the focus and detail that solo tasks demand. 
-                            Time management and attention to detail are my superpowers—
-                            whether it’s meeting deadlines, troubleshooting bugs, or making sure no stone goes unturned in a project.
-                            <br><br>If you’re looking for someone who’s eager, adaptable, and ready to take on exciting challenges, let’s connect—
-                            I’d love to hear from you!
-                            <br><br>
-                        </p>
-                        <!-- Tabs -->
-                        <div class="tab-titles">
-                            <div class="tab-links active-link" onclick="opentab('skills')">
-                                <i class="fa-solid fa-code"></i> Skills
-                            </div>
-                            <div class="tab-links" onclick="opentab('experience')">
-                                <i class="fa-solid fa-briefcase"></i> Experience
-                            </div>
-                            <div class="tab-links" onclick="opentab('education')">
-                                <i class="fa-solid fa-graduation-cap"></i> Education
-                            </div>
-                        </div>
-                        <div class="tab-contents active-tab" id="skills">
-                            <ul>
-                                <li><span>Frontend Development</span><br></li>
-                                <li><span>Backend Development<br></span></li>
-                                <li><span>Web App Development</span><br></li>
-                                <li><span>Time Management</span><br></li>
-                                <li><span>Attention To Detail</span><br></li>
-                                <li><span>Team Collaboration</span><br></li>
-                                <li><span>Communication</span><br></li>
-                            </ul>
-                        </div>
-                        <div class="tab-contents" id="experience">
-                            <ul>
-                                <li><span>Dec 2024 - Present</span><br>Web Development Intern at CapaCITI</li>
-                                <li><span>May 2024 - Jul 2024</span><br>Mentee at GirlCodeZA</li>
-                                <li><span>Mar 2024 - Dec 2024</span><br>English Teacher at A+ Academy</li>
-                                <li><span>Dec 2023 - Jan 2024</span><br>Software Development Intern at EliteX Academy</li>
-                            </ul>
-                        </div>
-                        <div class="tab-contents" id="education">
-                            <ul>
-                                <li><span>2021 - 2023</span><br>Bachelor of Science in Information Technology - Software Engineering</li>
-                                <li><span>2016 - 2020</span><br>National Senior Certificate - Bachelor’s Degree Pass</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="assets/images/about2.jpg" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              I'm a graduate in Software Development. My journey so far has been
+              a mix of curiosity, learning, and collaboration, and I’m always
+              excited to discover what’s next in the ever-evolving world of
+              tech.
+              <br /><br />Beyond my technical skills, I bring a positive
+              attitude (and a bright smile!) to every project I take on.
+              <br /><br />I thrive in team settings where communication and
+              collaboration are key, but I also value the focus and detail that
+              solo tasks demand. Time management and attention to detail are my
+              superpowers— whether it’s meeting deadlines, troubleshooting bugs,
+              or making sure no stone goes unturned in a project. <br /><br />If
+              you’re looking for someone who’s eager, adaptable, and ready to
+              take on exciting challenges, let’s connect— I’d love to hear from
+              you! <br /><br />
+            </p>
+            <!-- Tabs -->
+            <div class="tab-titles">
+              <div class="tab-links active-link" onclick="opentab('skills')">
+                <i class="fa-solid fa-code"></i> Skills
+              </div>
+              <div class="tab-links" onclick="opentab('experience')">
+                <i class="fa-solid fa-briefcase"></i> Experience
+              </div>
+              <div class="tab-links" onclick="opentab('education')">
+                <i class="fa-solid fa-graduation-cap"></i> Education
+              </div>
             </div>
-        </div>
-
-        <!-- Services Section -->
-
-        <div id="services">
-            <div class="container">
-                <h1 class="sub-title">My Services</h1>
-                <div class="services-list">
-                    <div>
-                        <i class="fa-solid fa-code"></i>
-                        <h2>Web Design</h2>
-                        <p>Embarking on the journey of web design, I bring forth a passionate dedication to crafting digital experiences that captivate and inspire. Though I'm at the beginning of this exciting adventure, my commitment to excellence ensures that each project receives meticulous attention to detail and a creative touch.</p>
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-crop-simple"></i>
-                        <h2>UI/UX Design</h2>
-                        <p>Design isn’t just how something looks—it’s how it works. I design intuitive interfaces and user flows to ensure seamless and engaging user experiences. I always consider accessibility and responsiveness across devices.</p>
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-laptop-code"></i>
-                        <h2>Full-Stack Projects</h2>
-                        <p>Leveraging both frontend and backend technologies, I’ve worked on full-stack applications using JavaScript, PHP, and MySQL. My focus is on developing scalable and maintainable systems that align with client needs.</p>
-                    </div>
-                </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>Frontend Development</span><br /></li>
+                <li>
+                  <span>Backend Development<br /></span>
+                </li>
+                <li><span>Web App Development</span><br /></li>
+                <li><span>Time Management</span><br /></li>
+                <li><span>Attention To Detail</span><br /></li>
+                <li><span>Team Collaboration</span><br /></li>
+                <li><span>Communication</span><br /></li>
+              </ul>
             </div>
-        </div>
-
-        <!-- Projects Section -->
-
-        <div id="projects">
-            <div class="container">
-                <h1 class="sub-title">Explore My Work</h1><br><br>
-                <div class="highlight-section">
-                    <div class="highlight-box">
-                        <p>Browse my development projects, creative solutions, and certified skills.</p><br><br><br>
-                        <a href="projects.html" class="btn btn2">Browse Projects</a>
-                        <a href="certificates.html" class="btn btn2">See Certifications</a>
-                    </div>
-                </div>
-                <!-- <a href="#" class="btn">See more</a> -->
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>Dec 2024 - Present</span><br />Web Development Intern at
+                  CapaCITI
+                </li>
+                <li>
+                  <span>May 2024 - Jul 2024</span><br />Mentee at GirlCodeZA
+                </li>
+                <li>
+                  <span>Mar 2024 - Dec 2024</span><br />English Teacher at A+
+                  Academy
+                </li>
+                <li>
+                  <span>Dec 2023 - Jan 2024</span><br />Software Development
+                  Intern at EliteX Academy
+                </li>
+              </ul>
             </div>
-        </div>
-
-        <!-- Contact Section -->
-
-        <div id="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="contact-left">
-                        <h1 class="sub-title">Contact Me</h1><br><br>
-                        <p><i class="fa-solid fa-envelope"></i>mphoitumeleng021@gmail.com</p>
-                        <p><i class="fa-solid fa-phone"></i>0674058079</p>
-                        <div class="social-icons">
-                            <a href="https://www.linkedin.com/in/mpho-itumeleng-202794295/"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="https://github.com/MphoItumeleng"><i class="fa-brands fa-github"></i></a>
-                        </div><br><br><br>
-                        <a href="assets/Mpho Itumeleng CV.pdf" target="_blank" class="btn btn2">View CV</a>
-                    </div>
-                    
-                    <!-- Form -->
-                    <div class="contact-right">
-                        <form id="contactForm" name="contact" method="POST" data-netlify="true">
-                            <input type="text" name="name" id="name" placeholder="Your Name" required>
-                            <input type="email" name="email" id="email" placeholder="Your Email" required>
-                            <textarea name="message" rows="5" id="message" placeholder="Your Message" required></textarea>
-                            <button type="submit" class="btn btn2">Send</button>
-                        </form>
-                    </div>
-                </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>2021 - 2023</span><br />Bachelor of Science in
+                  Information Technology - Software Engineering
+                </li>
+                <li>
+                  <span>2016 - 2020</span><br />National Senior Certificate -
+                  Bachelor’s Degree Pass
+                </li>
+              </ul>
             </div>
+          </div>
         </div>
+      </div>
+    </div>
 
-        <!-- Script for ChatBot -->
+    <!-- Services Section -->
 
-        <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
-        <script src="https://files.bpcontent.cloud/2025/02/17/11/20250217114358-JV818WGW.js"></script>
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Design</h2>
+            <p>
+              Embarking on the journey of web design, I bring forth a passionate
+              dedication to crafting digital experiences that captivate and
+              inspire. Though I'm at the beginning of this exciting adventure,
+              my commitment to excellence ensures that each project receives
+              meticulous attention to detail and a creative touch.
+            </p>
+          </div>
+          <div>
+            <i class="fa-solid fa-crop-simple"></i>
+            <h2>UI/UX Design</h2>
+            <p>
+              Design isn’t just how something looks—it’s how it works. I design
+              intuitive interfaces and user flows to ensure seamless and
+              engaging user experiences. I always consider accessibility and
+              responsiveness across devices.
+            </p>
+          </div>
+          <div>
+            <i class="fa-solid fa-laptop-code"></i>
+            <h2>Full-Stack Projects</h2>
+            <p>
+              Leveraging both frontend and backend technologies, I’ve worked on
+              full-stack applications using JavaScript, PHP, and MySQL. My focus
+              is on developing scalable and maintainable systems that align with
+              client needs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        <!-- Script for Sweet Alerts -->
+    <!-- Projects Section -->
 
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script>
-            $(document).ready(function() {
-                $("#contactForm").submit(function(e) {
-                    e.preventDefault();
-                    
-                    // Show loader & disable clicks
-                    $("#loadingOverlay").fadeIn();
-                    
-                    // Serialize form data
-                    let formData = new FormData(this);
-                    
-                    fetch("/", {
-                        method: "POST",
-                        body: formData
-                    }).then(response => {
-                        if (response.ok) {
-                            Swal.fire({
-                                icon: "success",
-                                title: "Message Sent!",
-                                text: "Your message has been sent successfully.",
-                                confirmButtonColor: "#4CAF50"
-                            });
-                            $("#contactForm")[0].reset();
-                        } else {
-                            Swal.fire({
-                                icon: "error",
-                                title: "Oops...",
-                                text: "Message sending failed. Please try again.",
-                                confirmButtonColor: "#D32F2F"
-                            });
-                        }
-                    }).catch(() => {
-                        Swal.fire({
-                            icon: "error",
-                            title: "Oops...",
-                            text: "Something went wrong. Please try again.",
-                            confirmButtonColor: "#D32F2F"
-                        });
-                    }).finally(() => {
-                        // Hide loader after request completes
-                        $("#loadingOverlay").fadeOut();
-                    });
+    <div id="projects">
+      <div class="container">
+        <h1 class="sub-title">Explore My Work</h1>
+        <br /><br />
+        <div class="highlight-section">
+          <div class="highlight-box">
+            <p>
+              Browse my development projects, creative solutions, and certified
+              skills.
+            </p>
+            <br /><br />
+            <a href="projects.html" class="btn btn2">Browse Projects</a>
+            <a href="certificates.html" class="btn btn2">See Certifications</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <br /><br />
+            <p>
+              <i class="fa-solid fa-envelope"></i>mphoitumeleng021@gmail.com
+            </p>
+            <p><i class="fa-solid fa-phone"></i>0674058079</p>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/mpho-itumeleng-202794295/"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a href="https://github.com/MphoItumeleng"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </div>
+            <br /><br /><br />
+            <a
+              href="assets/Mpho Itumeleng CV.pdf"
+              target="_blank"
+              class="btn btn2"
+              >View CV</a
+            >
+          </div>
+
+          <!-- Form -->
+          <div class="contact-right">
+            <form
+              id="contactForm"
+              name="contact"
+              method="POST"
+              data-netlify="true"
+            >
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Your Name"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="message"
+                rows="5"
+                id="message"
+                placeholder="Your Message"
+                required
+              ></textarea>
+              <button type="submit" class="btn btn2">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script for ChatBot -->
+
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/02/17/11/20250217114358-JV818WGW.js"></script>
+
+    <!-- Script for Sweet Alerts -->
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#contactForm").submit(function (e) {
+          e.preventDefault();
+
+          // Show loader & disable clicks
+          $("#loadingOverlay").fadeIn();
+
+          // Serialize form data
+          let formData = new FormData(this);
+
+          fetch("/", {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => {
+              if (response.ok) {
+                Swal.fire({
+                  icon: "success",
+                  title: "Message Sent!",
+                  text: "Your message has been sent successfully.",
+                  confirmButtonColor: "#4CAF50",
                 });
+                $("#contactForm")[0].reset();
+              } else {
+                Swal.fire({
+                  icon: "error",
+                  title: "Oops...",
+                  text: "Message sending failed. Please try again.",
+                  confirmButtonColor: "#D32F2F",
+                });
+              }
+            })
+            .catch(() => {
+              Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Something went wrong. Please try again.",
+                confirmButtonColor: "#D32F2F",
+              });
+            })
+            .finally(() => {
+              // Hide loader after request completes
+              $("#loadingOverlay").fadeOut();
             });
-        </script>
+        });
+      });
+    </script>
 
-        <!-- Loader -->
+    <!-- Loader -->
 
-        <div id="loadingOverlay">
-            <div class="spinner"></div>
-        </div>
-            
-    </body>
-
+    <div id="loadingOverlay">
+      <div class="spinner"></div>
+    </div>
+  </body>
 </html>
